@@ -1,9 +1,222 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Test Website</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Anish's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 0 0 10px #00ff00;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+        }
+        
+        .subtitle {
+            color: #00cc00;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        
+        .terminal-prompt {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid #00ff00;
+            background: rgba(0, 50, 0, 0.2);
+        }
+        
+        .section h2 {
+            color: #00ff00;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            color: #00ccff;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-item {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            background: rgba(0, 255, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #00ff00;
+        }
+        
+        .nav-links a {
+            color: #00ccff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border: 1px solid #00ccff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #00ccff;
+            color: #000;
+        }
+        
+        .ascii-art {
+            text-align: center;
+            font-size: 0.8em;
+            color: #006600;
+            margin: 20px 0;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="ascii-art">
+    ╔══════════════════════════════════════╗
+    ║        WELCOME TO MY PORTFOLIO       ║
+    ╚══════════════════════════════════════╝
+            </div>
+            <h1>Anish Nag</h1>
+            <div class="subtitle">
+                <span class="terminal-prompt">root@cybersec:~$</span> whoami
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="terminal-prompt">~/</span> About Me</h2>
+            <p>
+                Hello! I'm Anish, a passionate <span class="highlight">cybersecurity enthusiast</span> and 
+                computer science student currently working on my senior design project. I love exploring 
+                the fascinating world of cybersecurity, from <span class="highlight">penetration testing</span> 
+                to <span class="highlight">digital forensics</span> and everything in between.
+            </p>
+            <p>
+                When I'm not breaking things ethically or building secure systems, you'll find me 
+                working on various programming projects, participating in CTF competitions, or 
+                diving deep into the latest security vulnerabilities and threat intelligence.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2><span class="terminal-prompt">~/</span> Education & Focus</h2>
+            <p>
+                🎓 <strong>Computer Science Student</strong> - Currently pursuing my degree with a focus on cybersecurity<br>
+                🔐 <strong>Senior Design Project</strong> - Working on cutting-edge security solutions<br>
+                📚 <strong>Continuous Learning</strong> - Always staying updated with the latest in cybersec
+            </p>
+        </div>
+
+        <div class="section">
+            <h2><span class="terminal-prompt">~/</span> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Penetration Testing</div>
+                <div class="skill-item">Network Security</div>
+                <div class="skill-item">Python/Scripting</div>
+                <div class="skill-item">Linux Administration</div>
+                <div class="skill-item">Digital Forensics</div>
+                <div class="skill-item">Web Security</div>
+                <div class="skill-item">Cryptography</div>
+                <div class="skill-item">Malware Analysis</div>
+                <div class="skill-item">Incident Response</div>
+                <div class="skill-item">CTF Competitions</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="terminal-prompt">~/</span> What You'll Find Here</h2>
+            <p>
+                This portfolio showcases my journey through the world of cybersecurity and computer science:
+            </p>
+            <ul>
+                <li><span class="highlight">School Projects</span> - Academic assignments and research</li>
+                <li><span class="highlight">Cybersecurity Labs</span> - Hands-on security demonstrations</li>
+                <li><span class="highlight">Internship Experience</span> - Real-world professional projects</li>
+                <li><span class="highlight">Personal Projects</span> - Side projects and experiments</li>
+                <li><span class="highlight">CTF Writeups</span> - Solutions and learning experiences</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="terminal-prompt">~/</span> Current Status</h2>
+            <p>
+                <span class="terminal-prompt">anish@portfolio:~$</span> <span class="highlight">status</span><br>
+                🔄 Currently working on senior design project<br>
+                🎯 Seeking cybersecurity internships and opportunities<br>
+                📈 Continuously expanding my security knowledge<br>
+                🤝 Open to collaboration on interesting projects
+            </p>
+        </div>
+
+        <div class="ascii-art">
+        ┌─────────────────────────────────────┐
+        │  "Security is not a product,        │
+        │   but a process."                   │
+        │                    - Bruce Schneier │
+        └─────────────────────────────────────┘
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="internships.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</body>
 </html>
