@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Anish's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 0 0 10px #00ff00;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+        }
+        
+        .subtitle {
+            color: #00cc00;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        
+        .terminal-prompt {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .project-card {
+            margin: 30px 0;
+            padding: 25px;
+            border: 2px solid #00ff00;
+            background: rgba(0, 50, 0, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            background: rgba(0, 50, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 255, 0, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .project-card.featured {
+            border: 3px solid #00ccff;
+            background: rgba(0, 50, 50, 0.2);
+        }
+        
+        .project-card h2 {
+            color: #00ccff;
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .project-card.featured h2 {
+            color: #00ffff;
+        }
+        
+        .project-tag {
+            display: inline-block;
+            background: rgba(0, 255, 0, 0.2);
+            border: 1px solid #00ff00;
+            padding: 5px 12px;
+            margin: 5px 5px 15px 0;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: #00ff00;
+        }
+        
+        .featured-tag {
+            background: rgba(0, 255, 255, 0.3);
+            border-color: #00ccff;
+            color: #00ccff;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            color: #00ccff;
+        }
+        
+        .project-section {
+            margin: 15px 0;
+        }
+        
+        .project-section h3 {
+            color: #00ff00;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skills-list li::before {
+            content: "▸ ";
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #00ff00;
+        }
+        
+        .nav-links a {
+            color: #00ccff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border: 1px solid #00ccff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #00ccff;
+            color: #000;
+        }
+        
+        .nav-links a.active {
+            background: #00ff00;
+            color: #000;
+            border-color: #00ff00;
+        }
+        
+        .ascii-art {
+            text-align: center;
+            font-size: 0.8em;
+            color: #006600;
+            margin: 20px 0;
+            white-space: pre;
+        }
+
+        .doc-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            color: #00ff00;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .doc-link:hover {
+            background: rgba(0, 255, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="ascii-art">
+    ╔═══════════════════════════════════════╗
+    ║          PROJECT DIRECTORY            ║
+    ╚═══════════════════════════════════════╝
+            </div>
+            <h1>Projects</h1>
+            <div class="subtitle">
+                <span class="terminal-prompt">root@portfolio:~$</span> ls -la /projects/
+            </div>
+        </div>
+
+        <!-- SENIOR DESIGN PROJECT -->
+        <div class="project-card featured">
+            <span class="project-tag featured-tag">🎓 SENIOR DESIGN</span>
+            <span class="project-tag">Collins Aerospace</span>
+            <span class="project-tag">2024-2025</span>
+            
+            <h2>Secure Aircraft Data Load</h2>
+            
+            <div class="project-section">
+                <h3>Description</h3>
+                <p>
+                    Partnered with <span class="highlight">Collins Aerospace</span> to develop a secure test environment 
+                    for aircraft data loading systems. The project focused on proving the feasibility of secure 
+                    communication between avionics devices when delivering critical payload data. In aviation, data 
+                    loading operations are essential for updating flight software, navigation databases, and system 
+                    configurations - making security and efficiency paramount.
+                </p>
+                <p>
+                    Built a proof-of-concept system using dual <span class="highlight">Raspberry Pi</span> devices 
+                    to simulate aircraft data loading scenarios. Implemented and tested multiple encryption algorithms 
+                    (AES-256, RSA) to evaluate performance versus security tradeoffs. The test environment validated 
+                    secure data transfer protocols while maintaining the speed requirements necessary for real-world 
+                    aviation operations.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>My Role</h3>
+                <p>
+                    Served as the <span class="highlight">Security Implementation Lead</span>, responsible for 
+                    designing the encryption architecture and developing the secure communication protocols. Led the 
+                    hardware setup and configuration of the Raspberry Pi test environment. Conducted security analysis 
+                    and penetration testing on the prototype to identify vulnerabilities before final delivery.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>Skills & Knowledge Gained</h3>
+                <ul class="skills-list">
+                    <li>Embedded systems security and hardware-level encryption implementation</li>
+                    <li>Cryptographic algorithm selection and performance optimization</li>
+                    <li>Secure communication protocols in resource-constrained environments</li>
+                    <li>Professional collaboration with industry partner (Collins Aerospace)</li>
+                    <li>Technical documentation and presentation to stakeholders</li>
+                    <li>Real-world application of cybersecurity principles in aviation sector</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Big Picture Contribution</h3>
+                <p>
+                    This project addresses a critical need in modern aviation security. As aircraft become more 
+                    connected and reliant on software updates, securing the data loading process is essential to 
+                    preventing unauthorized access or malicious payload injection. Our work demonstrated that 
+                    strong encryption can be implemented without sacrificing the operational efficiency required 
+                    in aviation environments, potentially influencing future industry standards for secure aircraft 
+                    data management.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>Supporting Documentation</h3>
+                <a href="#" class="doc-link">📄 Project Report (CPRE 491/492)</a>
+                <a href="#" class="doc-link">📊 Technical Presentation</a>
+            </div>
+        </div>
+
+        <!-- PROJECT 2: R8MyApartment -->
+        <div class="project-card">
+            <span class="project-tag">Full-Stack Development</span>
+            <span class="project-tag">Database Design</span>
+            
+            <h2>R8MyApartment - Student Housing Platform</h2>
+            
+            <div class="project-section">
+                <h3>Description</h3>
+                <p>
+                    Developed a web application to help college students find housing and roommates while providing 
+                    a platform to rate and review apartment complexes. The app aggregates student reviews, rental 
+                    information, and roommate matching functionality into a single platform, addressing the common 
+                    pain point of finding reliable housing information and compatible roommates.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>My Role</h3>
+                <p>
+                    Served as the <span class="highlight">Backend Developer</span>, responsible for designing and 
+                    implementing the database architecture, user authentication system, and RESTful API endpoints. 
+                    Built the rating and review system that allows students to submit and view apartment ratings 
+                    based on multiple criteria (location, maintenance, price, amenities). Implemented the roommate 
+                    matching algorithm based on user preferences and compatibility factors.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>Skills & Knowledge Gained</h3>
+                <ul class="skills-list">
+                    <li>Backend web development with Node.js and Express framework</li>
+                    <li>Database design and management using MongoDB</li>
+                    <li>RESTful API development and documentation</li>
+                    <li>User authentication and session management</li>
+                    <li>Team collaboration using Git version control</li>
+                    <li>Agile development methodology and sprint planning</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Resources Used</h3>
+                <p>
+                    Node.js, Express.js, MongoDB, Mongoose ORM, JWT authentication, Postman for API testing, 
+                    Git/GitHub for version control, Heroku for deployment
+                </p>
+            </div>
+        </div>
+
+        <!-- PROJECT 3: Python Honeypot -->
+        <div class="project-card">
+            <span class="project-tag">Cybersecurity</span>
+            <span class="project-tag">Network Security</span>
+            
+            <h2>Network Honeypot System</h2>
+            
+            <div class="project-section">
+                <h3>Description</h3>
+                <p>
+                    Created a custom honeypot system in Python to detect and analyze malicious network activity. 
+                    The honeypot simulates vulnerable services (SSH, HTTP, FTP) to attract attackers and log their 
+                    tactics, techniques, and procedures. Collected data on common attack patterns, brute force 
+                    attempts, and exploit payloads to better understand attacker behavior and improve defensive 
+                    strategies.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>My Role</h3>
+                <p>
+                    Solo developer responsible for the entire implementation. Designed the honeypot architecture, 
+                    implemented service emulation for multiple protocols, and built the logging and analysis system. 
+                    Deployed the honeypot on a cloud server and monitored attack activity over several weeks, 
+                    generating reports on findings.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>Skills & Knowledge Gained</h3>
+                <ul class="skills-list">
+                    <li>Python socket programming and network protocol implementation</li>
+                    <li>Understanding of common attack vectors and exploitation techniques</li>
+                    <li>Log analysis and threat intelligence gathering</li>
+                    <li>Linux system administration and firewall configuration</li>
+                    <li>Secure deployment practices for security research environments</li>
+                    <li>Data visualization for security metrics and attack patterns</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Resources Used</h3>
+                <p>
+                    Python 3, socket library, asyncio for concurrent connections, SQLite for logging, 
+                    iptables for network filtering, DigitalOcean for cloud deployment, Matplotlib for data visualization
+                </p>
+            </div>
+        </div>
+
+        <!-- PROJECT 4: MIPS Processor -->
+        <div class="project-card">
+            <span class="project-tag">Computer Architecture</span>
+            <span class="project-tag">Hardware Design</span>
+            
+            <h2>MIPS Processor Implementation</h2>
+            
+            <div class="project-section">
+                <h3>Description</h3>
+                <p>
+                    Designed and implemented a functional MIPS (Microprocessor without Interlocked Pipeline Stages) 
+                    processor as part of a computer architecture course. The processor supports core MIPS instructions 
+                    including arithmetic operations, memory access, and control flow. Built using hardware description 
+                    language and verified through simulation and testing with various assembly programs.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>My Role</h3>
+                <p>
+                    Individual project where I implemented the complete datapath and control unit. Designed the 
+                    ALU (Arithmetic Logic Unit), register file, instruction memory, and data memory components. 
+                    Debugged timing issues and verified correct instruction execution through comprehensive test 
+                    programs written in MIPS assembly.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3>Skills & Knowledge Gained</h3>
+                <ul class="skills-list">
+                    <li>Computer architecture fundamentals and processor design</li>
+                    <li>Hardware description language (Verilog/VHDL) programming</li>
+                    <li>Understanding of instruction set architecture (ISA)</li>
+                    <li>Digital logic design and finite state machines</li>
+                    <li>Assembly language programming and machine code</li>
+                    <li>Hardware simulation and debugging techniques</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Resources Used</h3>
+                <p>
+                    Verilog HDL, ModelSim for simulation, MIPS assembly language, Quartus Prime for synthesis, 
+                    FPGA development board for hardware testing (optional deployment)
+                </p>
+            </div>
+        </div>
+
+        <div class="ascii-art">
+        ┌───────────────────────────────────────┐
+        │  "Any fool can write code that a      │
+        │   computer can understand. Good       │
+        │   programmers write code that humans  │
+        │   can understand."                    │
+        │                  - Martin Fowler      │
+        └───────────────────────────────────────┘
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="career.html">Career</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
