@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Anish's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 0 0 10px #00ff00;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+        }
+        
+        .subtitle {
+            color: #00cc00;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        
+        .terminal-prompt {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .experience-card {
+            margin: 30px 0;
+            padding: 25px;
+            border: 2px solid #00ff00;
+            background: rgba(0, 50, 0, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            background: rgba(0, 50, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 255, 0, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .experience-card h2 {
+            color: #00ccff;
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        
+        .company-info {
+            color: #00ff00;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .date-range {
+            color: #00cc00;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .experience-tag {
+            display: inline-block;
+            background: rgba(0, 255, 0, 0.2);
+            border: 1px solid #00ff00;
+            padding: 5px 12px;
+            margin: 5px 5px 15px 0;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: #00ff00;
+        }
+        
+        .highlight {
+            color: #00ccff;
+        }
+        
+        .section {
+            margin: 15px 0;
+        }
+        
+        .section h3 {
+            color: #00ff00;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skills-list li::before {
+            content: "▸ ";
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .achievement-box {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid #00ccff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .achievement-box h2 {
+            color: #00ffff;
+            margin-top: 0;
+        }
+        
+        .trophy {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+        
+        .competition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .competition-item {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .competition-item.gold {
+            border: 2px solid #FFD700;
+            background: rgba(255, 215, 0, 0.1);
+        }
+        
+        .competition-item.silver {
+            border: 2px solid #C0C0C0;
+            background: rgba(192, 192, 192, 0.1);
+        }
+        
+        .competition-item.bronze {
+            border: 2px solid #CD7F32;
+            background: rgba(205, 127, 50, 0.1);
+        }
+        
+        .place-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #00ff00;
+        }
+        
+        .nav-links a {
+            color: #00ccff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border: 1px solid #00ccff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #00ccff;
+            color: #000;
+        }
+        
+        .nav-links a.active {
+            background: #00ff00;
+            color: #000;
+            border-color: #00ff00;
+        }
+        
+        .ascii-art {
+            text-align: center;
+            font-size: 0.8em;
+            color: #006600;
+            margin: 20px 0;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="ascii-art">
+    ╔═══════════════════════════════════════╗
+    ║        PROFESSIONAL EXPERIENCE        ║
+    ╚═══════════════════════════════════════╝
+            </div>
+            <h1>Experience</h1>
+            <div class="subtitle">
+                <span class="terminal-prompt">root@career:~$</span> cat work_history.log
+            </div>
+        </div>
+
+        <!-- INTERNSHIP 1: John Deere Red Team -->
+        <div class="experience-card">
+            <span class="experience-tag">Offensive Security</span>
+            <span class="experience-tag">Red Team</span>
+            <span class="experience-tag">Current</span>
+            
+            <h2>Embedded Security Engineer - Red Team Intern</h2>
+            <div class="company-info">🚜 John Deere — Urbandale, IA</div>
+            <div class="date-range">May 2025 – August 2025</div>
+            
+            <div class="section">
+                <h3>Duties & Projects</h3>
+                <ul class="skills-list">
+                    <li>Engineering <span class="highlight">hardware and software exploitation tools</span> for production penetration testing, including custom firmware analysis utilities and specialized network attack devices</li>
+                    <li>Conducting vulnerability research on <span class="highlight">embedded systems, IoT devices, and industrial control systems</span> to identify security gaps in agricultural technology infrastructure</li>
+                    <li>Collaborating with offensive operations team on <span class="highlight">penetration testing engagements</span>, threat modeling exercises, and responsible vulnerability disclosure processes</li>
+                    <li>Competing in Capture The Flag competitions at major security conferences to sharpen offensive security skills and represent John Deere's security team</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills Learned</h3>
+                <ul class="skills-list">
+                    <li>Firmware reverse engineering and binary exploitation techniques</li>
+                    <li>Hardware hacking and physical security testing methodologies</li>
+                    <li>Custom tooling development for embedded system penetration testing</li>
+                    <li>IoT and Industrial Control System (ICS) security assessment</li>
+                    <li>Agricultural technology (AgTech) threat landscape analysis</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Soft Skills Developed</h3>
+                <ul class="skills-list">
+                    <li>Professional communication of security findings to technical and non-technical stakeholders</li>
+                    <li>Collaboration with cross-functional security teams on complex engagements</li>
+                    <li>Ethical hacking practices and responsible disclosure procedures</li>
+                    <li>Time management and project prioritization in fast-paced security operations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CYBER TRACTOR CHALLENGE -->
+        <div class="experience-card">
+            <span class="experience-tag">Competitive Selection</span>
+            <span class="experience-tag">AgTech Security</span>
+            
+            <h2>Cyber Tractor Challenge - Competitor</h2>
+            <div class="company-info">🔒 Nationwide Selection (1 of 24 Students) — Ames, IA</div>
+            <div class="date-range">June 2025</div>
+            
+            <div class="section">
+                <h3>Experience Overview</h3>
+                <p>
+                    Selected as <span class="highlight">1 of only 24 students nationwide</span> for an intensive week-long 
+                    penetration testing engagement against real agricultural technology systems and IoT infrastructure. 
+                    Worked alongside industry professionals and fellow top cybersecurity students to identify vulnerabilities 
+                    in production-grade agricultural systems.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Duties & Projects</h3>
+                <ul class="skills-list">
+                    <li>Performed comprehensive security testing across multiple domains: <span class="highlight">reverse engineering, mobile application pentesting, web exploitation, and CAN bus exploitation</span></li>
+                    <li>Delivered professional security assessment findings and remediation recommendations directly to participating companies' CISOs and security leadership</li>
+                    <li>Collaborated with diverse team of elite students on complex, multi-faceted penetration testing scenarios</li>
+                    <li>Documented vulnerabilities and created detailed technical reports under time constraints</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills Learned</h3>
+                <ul class="skills-list">
+                    <li>CAN bus protocol analysis and automotive/agricultural vehicle exploitation</li>
+                    <li>Mobile application security testing (Android/iOS)</li>
+                    <li>IoT device security assessment in agricultural contexts</li>
+                    <li>Professional vulnerability reporting and executive communication</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- INTERNSHIP 2: John Deere Third-Party Risk -->
+        <div class="experience-card">
+            <span class="experience-tag">GRC</span>
+            <span class="experience-tag">Risk Management</span>
+            
+            <h2>Third-Party Risk Management Analyst Intern</h2>
+            <div class="company-info">🚜 John Deere — Johnston, IA</div>
+            <div class="date-range">May 2024 – August 2024</div>
+            
+            <div class="section">
+                <h3>Duties & Projects</h3>
+                <ul class="skills-list">
+                    <li>Assessed cybersecurity risks across <span class="highlight">1,000+ third-party vendors</span> using OneTrust and UpGuard risk management platforms, ensuring compliance with SOC 2 and ISO 27001 standards</li>
+                    <li>Developed <span class="highlight">Python automation scripts</span> for browser isolation workflows using Zscaler, significantly reducing user exposure to low security score websites</li>
+                    <li>Created AI-driven risk assessment guides to streamline security evaluations for both internal security teams and external vendor organizations</li>
+                    <li>Collaborated with digital red team on select offensive security operations, gaining exposure to both defensive and offensive security perspectives</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills Learned</h3>
+                <ul class="skills-list">
+                    <li>Third-party risk assessment methodologies and vendor security evaluation</li>
+                    <li>Governance, Risk, and Compliance (GRC) frameworks (SOC 2, ISO 27001)</li>
+                    <li>Security platform automation (OneTrust, UpGuard, Zscaler)</li>
+                    <li>Python scripting for security workflow optimization</li>
+                    <li>Risk scoring and security posture analysis</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Soft Skills Developed</h3>
+                <ul class="skills-list">
+                    <li>Vendor relationship management and professional communication</li>
+                    <li>Risk communication to leadership and decision-makers</li>
+                    <li>Process improvement and workflow optimization</li>
+                    <li>Cross-team collaboration between GRC and offensive security teams</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Evaluation & Recognition</h3>
+                <p>
+                    Successfully completed all assigned risk assessments ahead of schedule. Automation scripts were 
+                    adopted by the team for continued use beyond internship period. Received positive feedback for 
+                    initiative in bridging GRC and red team operations.
+                </p>
+            </div>
+        </div>
+
+        <!-- INTERNSHIP 3: John Deere Security Engineer -->
+        <div class="experience-card">
+            <span class="experience-tag">Cloud Security</span>
+            <span class="experience-tag">DevSecOps</span>
+            
+            <h2>Security Engineer Intern</h2>
+            <div class="company-info">🚜 John Deere — Johnston, IA</div>
+            <div class="date-range">May 2023 – August 2023</div>
+            
+            <div class="section">
+                <h3>Duties & Projects</h3>
+                <ul class="skills-list">
+                    <li>Enhanced the <span class="highlight">security aggregation pipeline</span> to normalize security findings from multiple tools and aggregate vulnerabilities across enterprise infrastructure</li>
+                    <li>Engineered <span class="highlight">automated credential rotation system</span> using AWS Lambda and AWS Secrets Manager, improving security posture through regular credential updates</li>
+                    <li>Implemented <span class="highlight">Infrastructure-as-Code (IaC) security controls</span> using Terraform, establishing baseline security configurations for AWS resources across development, staging, and production environments</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills Learned</h3>
+                <ul class="skills-list">
+                    <li>Cloud security in AWS (EC2, Lambda, S3, Secrets Manager)</li>
+                    <li>Infrastructure-as-Code with Terraform</li>
+                    <li>Security automation and DevSecOps practices</li>
+                    <li>Vulnerability management and security aggregation platforms</li>
+                    <li>Secure credential management and rotation strategies</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Soft Skills Developed</h3>
+                <ul class="skills-list">
+                    <li>Technical documentation for security infrastructure</li>
+                    <li>Collaboration with DevOps and infrastructure teams</li>
+                    <li>Problem-solving in cloud security contexts</li>
+                    <li>Agile development methodologies</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Evaluation & Recognition</h3>
+                <p>
+                    Credential rotation system was deployed to production and continues to serve as critical security 
+                    infrastructure. Terraform templates became standard baseline for new AWS resource deployments. 
+                    Received strong performance reviews and invitation to return for future internships.
+                </p>
+            </div>
+        </div>
+
+        <!-- COMPETITIONS & ACHIEVEMENTS SECTION -->
+        <div class="achievement-box">
+            <h2><span class="trophy">🏆</span>Competition Achievements</h2>
+            
+            <div class="section">
+                <h3>Cyber Defense Competition (CDC) Results</h3>
+                <div class="competition-grid">
+                    <div class="competition-item gold">
+                        <div class="place-text" style="color: #FFD700;">🥇 1st Place</div>
+                        <div>International CDC</div>
+                        <div style="font-size: 0.9em; margin-top: 5px;">February 2024</div>
+                    </div>
+                    <div class="competition-item silver">
+                        <div class="place-text" style="color: #C0C0C0;">🥈 2nd Place</div>
+                        <div>Regional CDC</div>
+                    </div>
+                    <div class="competition-item bronze">
+                        <div class="place-text" style="color: #CD7F32;">🥉 3rd Place</div>
+                        <div>Regional CDC</div>
+                    </div>
+                    <div class="competition-item bronze">
+                        <div class="place-text" style="color: #CD7F32;">🥉 3rd Place</div>
+                        <div>Regional CDC</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>International CDC - Competition Breakdown</h3>
+                <p>
+                    Led team to <span class="highlight">1st place victory out of 38 international teams</span> at the 
+                    Iowa State International Cyber Defense Competition. Defended enterprise network against professional 
+                    red team operators over multi-day competition.
+                </p>
+                <ul class="skills-list">
+                    <li><span class="highlight">Blue Team Operations:</span> Implemented Suricata IDS for network intrusion detection, hardened Active Directory infrastructure using Group Policy Objects, configured pfSense firewall rules, and conducted threat hunting using Wazuh SIEM</li>
+                    <li><span class="highlight">Red Team Operations:</span> Performed internal red teaming against our own infrastructure to identify vulnerabilities before remediation, combining offensive and defensive security perspectives</li>
+                    <li><span class="highlight">Dual-Role Experience:</span> Executed both red team penetration testing to discover weaknesses and blue team defensive hardening to prepare network defenses against the official competition red team</li>
+                    <li><span class="highlight">Technical Implementation:</span> Deployed security controls including firewalls, intrusion detection systems, SIEM platforms, and identity management solutions under time pressure</li>
+                    <li><span class="highlight">Documentation:</span> Maintained detailed incident response logs, network diagrams, and security configuration documentation throughout competition</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills Demonstrated in Competitions</h3>
+                <ul class="skills-list">
+                    <li><span class="highlight">Firewall Management:</span> pfSense configuration, rule creation, and traffic analysis</li>
+                    <li><span class="highlight">Intrusion Detection:</span> Suricata IDS deployment and signature tuning</li>
+                    <li><span class="highlight">SIEM Operations:</span> Wazuh log aggregation, correlation rules, and threat hunting</li>
+                    <li><span class="highlight">Active Directory Security:</span> GPO hardening, user access controls, privilege management</li>
+                    <li><span class="highlight">SOC Operations:</span> Incident detection, triage, response, and documentation</li>
+                    <li><span class="highlight">Red Teaming:</span> Vulnerability scanning, exploitation, privilege escalation</li>
+                    <li><span class="highlight">Blue Team Defense:</span> System hardening, patch management, security monitoring</li>
+                    <li><span class="highlight">Threat Hunting:</span> Proactive threat detection using SIEM and log analysis</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Capture The Flag (CTF) Competitions</h3>
+                <p>
+                    <span class="highlight">Active competitor</span> in multiple national CTF competitions including:
+                </p>
+                <ul class="skills-list">
+                    <li>US Open Cyber Games - National competition</li>
+                    <li>HackTheBox University CTF - Collegiate level</li>
+                    <li>PicoCTF National Competition - Educational CTF</li>
+                </ul>
+                <p>
+                    Focus areas: <span class="highlight">Web exploitation, cryptography, reverse engineering, and binary exploitation</span>. 
+                    Consistently developing skills in offensive security through hands-on challenges and real-world scenarios.
+                </p>
+            </div>
+        </div>
+
+        <div class="ascii-art">
+        ┌───────────────────────────────────────┐
+        │  "Success is not final, failure is    │
+        │   not fatal: it is the courage to     │
+        │   continue that counts."              │
+        │               - Winston Churchill     │
+        └───────────────────────────────────────┘
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="career.html">Career</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
